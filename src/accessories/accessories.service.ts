@@ -3,7 +3,9 @@ import { accessories } from './json/accessories';
 
 @Injectable()
 export class AccessoriesService {
-  getAccessories = async (): Promise<any> => {
-    return accessories;
+  getAccessories = async (type?: string): Promise<any> => {
+    return type && accessories?.[type]?.length > 0
+      ? [accessories?.[type]]
+      : accessories;
   };
 }
