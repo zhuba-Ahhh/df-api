@@ -8,7 +8,8 @@ export class AppService {
       '/material/getDetail',
       '/agent/getAgents',
       '/arms/getArms',
-      '/accessories/getAccessories',
+      '/accessories/getAccessories?type=accForeGrip',
+      '/protect/getProtect?type=helmet',
     ];
   }
 }
