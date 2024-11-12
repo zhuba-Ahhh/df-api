@@ -8,6 +8,7 @@ export class AppService {
       '/material/getDetail',
       '/agent/getAgents',
       '/arms/getArms',
+      '/accessories/getAccessories',
     ];
   }
 }
