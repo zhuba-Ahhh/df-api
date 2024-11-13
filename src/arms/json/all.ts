@@ -1,4 +1,4 @@
-const Arms = {
+const allArms = {
   list: [
     {
       id: 10733,
@@ -7473,4 +7473,4 @@ const Arms = {
   },
 };
 
-export { Arms };
+export { allArms };

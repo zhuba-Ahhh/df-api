@@ -10,6 +10,7 @@ export class AppService {
       '/arms/getArms',
       '/accessories/getAccessories?type=accForeGrip',
       '/protect/getProtect?type=helmet',
+      '/doc',
     ];
   }
 }

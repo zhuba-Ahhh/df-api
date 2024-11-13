@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { Arms } from './json/arms';
+import { allArms } from './json/all';
 
 @Injectable()
 export class ArmsService {
-  getArms = async (): Promise<any> => {
-    return Arms;
+  getArms = async (type = 'all'): Promise<any> => {
+    return !type || (type === 'all' && allArms);
   };
 }
