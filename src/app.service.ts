@@ -11,6 +11,6 @@ export class AppService {
       '/accessories/getAccessories?type=accForeGrip',
       '/protect/getProtect?type=helmet',
       '/doc',
-    ];
+    ].map((item) => `https://df-api.vercel.app${item}`);
   }
 }

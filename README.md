@@ -3,3 +3,4 @@
 ## docs
 
 [Docs](https://df-api.vercel.app/doc)
+[Docs Json](http://[::1]:3101/doc/json)
