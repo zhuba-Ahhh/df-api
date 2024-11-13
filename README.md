@@ -2,4 +2,4 @@
 
 ## docs
 
-[Docs](https://df-api.vercel.app/)
+[Docs](https://df-api.vercel.app/doc)

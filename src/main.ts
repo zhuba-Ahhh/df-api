@@ -16,7 +16,9 @@ async function bootstrap() {
     .addTag('test')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('doc', app, document);
+  SwaggerModule.setup('doc', app, document, {
+    jsonDocumentUrl: 'doc/json',
+  });
   await app.listen(3101);
   console.log(`Application is running on: ${await app.getUrl()}`);
 }
