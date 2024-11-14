@@ -5,7 +5,7 @@ import { ProtectService } from './protect.service';
 export class ProtectController {
   constructor(private readonly protectService: ProtectService) {}
   @Get('getProtect')
-  async getProtect(@Query() type: string) {
+  async getProtect(@Query() type: 'helmet' | 'armor' | 'bag' | 'chest') {
     const data = await this.protectService.getProtect(type);
     return { code: 1, data }; // 封装返回格式
   }
