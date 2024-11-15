@@ -6,6 +6,6 @@ export class PropsService {
   getProps = async (
     type: 'key' | 'consume' | 'collection' | 'mandel',
   ): Promise<any> => {
-    return props?.[type] || [];
+    return props?.[type] || props;
   };
 }
