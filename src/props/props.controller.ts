@@ -1,7 +1,7 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { PropsService } from './props.service';
 
-@Controller('Props')
+@Controller('props')
 export class PropsController {
   constructor(private readonly propsService: PropsService) {}
   @Get('getProps')
