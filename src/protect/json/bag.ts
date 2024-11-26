@@ -16,7 +16,7 @@ const bag = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11080006002.png',
     protectDetail: {
       moveSpeed: {
-        'percent ': -2,
+        percent: -2,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -40,7 +40,7 @@ const bag = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11080006003.png',
     protectDetail: {
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -64,7 +64,7 @@ const bag = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11080006004.png',
     protectDetail: {
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -88,7 +88,7 @@ const bag = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11080005001.png',
     protectDetail: {
       moveSpeed: {
-        'percent ': -2,
+        percent: -2,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -112,7 +112,7 @@ const bag = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11080005002.png',
     protectDetail: {
       moveSpeed: {
-        'percent ': -2,
+        percent: -2,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -136,7 +136,7 @@ const bag = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11080005003.png',
     protectDetail: {
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -160,7 +160,7 @@ const bag = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11080005004.png',
     protectDetail: {
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -203,7 +203,7 @@ const bag = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11080004002.png',
     protectDetail: {
       moveSpeed: {
-        'percent ': -2,
+        percent: -2,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -227,7 +227,7 @@ const bag = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11080004003.png',
     protectDetail: {
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -251,7 +251,7 @@ const bag = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11080004004.png',
     protectDetail: {
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -294,7 +294,7 @@ const bag = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11080003001.png',
     protectDetail: {
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -318,7 +318,7 @@ const bag = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11080003002.png',
     protectDetail: {
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -437,7 +437,7 @@ const bag = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11080002003.png',
     protectDetail: {
       aimSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },

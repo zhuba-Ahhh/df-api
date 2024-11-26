@@ -18,12 +18,12 @@ const armor = [
       durability: 140,
       protectLevel: 6,
       aimSpeed: {
-        'percent ': -8,
+        percent: -8,
         batteryValue: 4,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -7,
+        percent: -7,
         batteryValue: 2,
         batteryColor: 'red',
       },
@@ -51,12 +51,12 @@ const armor = [
       durability: 115,
       protectLevel: 6,
       aimSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -3,
+        percent: -3,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -84,12 +84,12 @@ const armor = [
       durability: 125,
       protectLevel: 6,
       aimSpeed: {
-        'percent ': -6,
+        percent: -6,
         batteryValue: 3,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -5,
+        percent: -5,
         batteryValue: 2,
         batteryColor: 'red',
       },
@@ -117,12 +117,12 @@ const armor = [
       durability: 150,
       protectLevel: 6,
       aimSpeed: {
-        'percent ': -12,
+        percent: -12,
         batteryValue: 4,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -8,
+        percent: -8,
         batteryValue: 3,
         batteryColor: 'red',
       },
@@ -150,7 +150,7 @@ const armor = [
       durability: 95,
       protectLevel: 5,
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -178,12 +178,12 @@ const armor = [
       durability: 115,
       protectLevel: 5,
       aimSpeed: {
-        'percent ': -8,
+        percent: -8,
         batteryValue: 3,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -7,
+        percent: -7,
         batteryValue: 2,
         batteryColor: 'red',
       },
@@ -211,12 +211,12 @@ const armor = [
       durability: 105,
       protectLevel: 5,
       aimSpeed: {
-        'percent ': -5,
+        percent: -5,
         batteryValue: 3,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -3,
+        percent: -3,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -244,12 +244,12 @@ const armor = [
       durability: 125,
       protectLevel: 5,
       aimSpeed: {
-        'percent ': -10,
+        percent: -10,
         batteryValue: 4,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -5,
+        percent: -5,
         batteryValue: 2,
         batteryColor: 'red',
       },
@@ -277,12 +277,12 @@ const armor = [
       durability: 80,
       protectLevel: 4,
       aimSpeed: {
-        'percent ': -5,
+        percent: -5,
         batteryValue: 3,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -5,
+        percent: -5,
         batteryValue: 2,
         batteryColor: 'red',
       },
@@ -310,12 +310,12 @@ const armor = [
       durability: 90,
       protectLevel: 4,
       aimSpeed: {
-        'percent ': -2,
+        percent: -2,
         batteryValue: 1,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -343,12 +343,12 @@ const armor = [
       durability: 100,
       protectLevel: 4,
       aimSpeed: {
-        'percent ': -4,
+        percent: -4,
         batteryValue: 2,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -3,
+        percent: -3,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -376,12 +376,12 @@ const armor = [
       durability: 110,
       protectLevel: 4,
       aimSpeed: {
-        'percent ': -5,
+        percent: -5,
         batteryValue: 3,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -5,
+        percent: -5,
         batteryValue: 2,
         batteryColor: 'red',
       },
@@ -432,7 +432,7 @@ const armor = [
       durability: 50,
       protectLevel: 3,
       aimSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -460,12 +460,12 @@ const armor = [
       durability: 60,
       protectLevel: 3,
       aimSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -493,12 +493,12 @@ const armor = [
       durability: 75,
       protectLevel: 3,
       aimSpeed: {
-        'percent ': -3,
+        percent: -3,
         batteryValue: 2,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -526,12 +526,12 @@ const armor = [
       durability: 85,
       protectLevel: 3,
       aimSpeed: {
-        'percent ': -4,
+        percent: -4,
         batteryValue: 2,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -2,
+        percent: -2,
         batteryValue: 1,
         batteryColor: 'red',
       },
