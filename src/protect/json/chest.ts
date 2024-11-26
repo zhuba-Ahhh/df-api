@@ -16,7 +16,7 @@ const chest = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11070005001.png',
     protectDetail: {
       aimSpeed: {
-        'percent ': -2,
+        percent: -2,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -40,12 +40,12 @@ const chest = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11070005003.png',
     protectDetail: {
       aimSpeed: {
-        'percent ': -3,
+        percent: -3,
         batteryValue: 2,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -69,12 +69,12 @@ const chest = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11070005004.png',
     protectDetail: {
       aimSpeed: {
-        'percent ': -5,
+        percent: -5,
         batteryValue: 3,
         batteryColor: 'red',
       },
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -98,7 +98,7 @@ const chest = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11070004001.png',
     protectDetail: {
       aimSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
@@ -122,7 +122,7 @@ const chest = [
       'https://playerhub.df.qq.com/playerhub/60004/object/p_11070004002.png',
     protectDetail: {
       moveSpeed: {
-        'percent ': -1,
+        percent: -1,
         batteryValue: 1,
         batteryColor: 'red',
       },
