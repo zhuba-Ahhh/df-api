@@ -5,8 +5,8 @@ import { AccessoriesService } from './accessories.service';
 export class AccessoriesController {
   constructor(private readonly accessoriesService: AccessoriesService) {}
   @Get('getAccessories')
-  async getAccessories(@Query() type: string) {
-    const data = await this.accessoriesService.getAccessories(type);
+  async getAccessories(@Query() type: { type: string }) {
+    const data = await this.accessoriesService.getAccessories(type.type);
     return { code: 1, data }; // 封装返回格式
   }
 }
