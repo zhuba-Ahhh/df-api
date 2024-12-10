@@ -1,4 +1,4 @@
-import { Controller, Get, HttpStatus } from '@nestjs/common';
+import { Controller, Get, HttpStatus, Query } from '@nestjs/common';
 import { AgentService } from './agent.service';
 import { ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { AgentsResponsePostDtoArray } from './dto/agents';
@@ -13,8 +13,8 @@ export class AgentController {
     type: AgentsResponsePostDtoArray,
   })
   @Get('getAgents')
-  async getAgents() {
-    const data = await this.agentService.getAgents();
+  async getAgents(@Query('version') version: string) {
+    const data = await this.agentService.getAgents(version);
     return { code: 1, data }; // 封装返回格式
   }
 }
