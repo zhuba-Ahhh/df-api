@@ -8,6 +8,7 @@ import { AccessoriesModule } from './accessories/accessories.module';
 import { ProtectModule } from './protect/protect.module';
 import { PropsModule } from './props/props.module';
 import { ConfigModule } from './config/config.module';
+import { InfoModule } from './info/info.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { ConfigModule } from './config/config.module';
     MaterialModule,
     ProtectModule,
     PropsModule,
+    InfoModule,
   ],
   controllers: [AppController],
   providers: [AppService],

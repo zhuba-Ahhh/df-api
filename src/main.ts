@@ -22,7 +22,7 @@ async function bootstrap() {
     customCssUrl: CSS_URL,
     customJs: JS_URL,
   });
-  await app.listen(3101);
+  await app.listen(3102);
   console.log(`Application is running on: ${await app.getUrl()}`);
 }
 bootstrap();
