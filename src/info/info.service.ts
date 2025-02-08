@@ -2,6 +2,55 @@ import { Injectable } from '@nestjs/common';
 
 import axios from 'axios';
 
+/**
+ * Request
+ */
+export interface Request {
+  code: number;
+  data: Datum[];
+  [property: string]: any;
+}
+
+export interface Datum {
+  ArmedForceId: number;
+  CarryoutSafeBoxPrice: number;
+  CarryoutSelfPrice: number;
+  dtEventTime: string;
+  DurationS: number;
+  EscapeFailReason: number;
+  FinalPrice: string;
+  flowCalGainedPrice: number;
+  KeyChainCarryInPrice: number;
+  KeyChainCarryOutPrice: string;
+  KillAICount: number;
+  KillCount: number;
+  KillPlayerAICount: number;
+  MapId: string;
+  teammateArr: TeammateArr[];
+  [property: string]: any;
+}
+
+export interface TeammateArr {
+  ArmedForceId: number;
+  CarryoutSafeBoxPrice: number;
+  CarryoutSelfPrice: number;
+  dtEventTime: string;
+  DurationS: number;
+  EscapeFailReason: number;
+  FinalPrice: string;
+  KeyChainCarryInPrice: number;
+  KeyChainCarryOutPrice: string;
+  KillAICount: number;
+  KillCount: number;
+  KillPlayerAICount: number;
+  MapId: string;
+  nickName: string;
+  Rescue: number;
+  TeamId: string;
+  vopenid: boolean;
+  [property: string]: any;
+}
+
 @Injectable()
 export class InfoService {
   async getInfo(page: string) {
@@ -32,7 +81,7 @@ export class InfoService {
       const response = await axios.post(targetUrl, data.toString(), {
         headers,
       });
-      return response?.data?.jData?.data || [];
+      return (response?.data?.jData?.data || []) as Datum[];
     } catch (error) {
       // 处理错误
       console.error('Error forwarding request:', error);
