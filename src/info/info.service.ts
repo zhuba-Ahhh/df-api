@@ -81,4 +81,29 @@ export class InfoService {
       return [];
     }
   }
+
+  async getThreadDetail(threadID: number) {
+    const data = new URLSearchParams();
+    data.append('iChartId', '316968');
+    data.append('sIdeToken', 'KfXJwH');
+    data.append('method', 'thread.detail');
+    data.append('param', JSON.stringify({ threadID }));
+
+    try {
+      const response = await axios.post(this.targetUrl, data.toString(), {
+        headers: {
+          xweb_xhr: '1',
+          Cookie:
+            'openid=oA2F77QwCpTZS1K4l6S5a0vPgImQ; acctype=mini; appid=wx1c36464bbea2507a; ieg_ams_session_token=26addbf5b9e946c7f5c7ddd258253a6659b9617d5f23933b979e4303c2da9756ea89; ieg_ams_token=7b9114300b79b9f89871547831663f9a; ieg_ams_token_time=1739532320',
+        },
+      });
+
+      const res = response.data.jData.data.data;
+
+      return res;
+    } catch (error) {
+      console.error('Error getting thread detail:', error);
+      return null;
+    }
+  }
 }
