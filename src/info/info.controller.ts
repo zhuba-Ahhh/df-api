@@ -22,4 +22,12 @@ export class InfoController {
     const data = await this.infoService.getAssets(ck);
     return { code: 1, data }; // 封装返回格式
   }
+
+  @Get('getThreadDetail')
+  async getThreadDetail(@Query('threadID') threadID: string) {
+    const data = await this.infoService.getThreadDetail(
+      Number(threadID || 18226),
+    );
+    return { code: 1, data };
+  }
 }
