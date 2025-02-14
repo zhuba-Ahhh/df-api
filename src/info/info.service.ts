@@ -94,11 +94,11 @@ export class InfoService {
         headers: {
           xweb_xhr: '1',
           Cookie:
-            'openid=oA2F77QwCpTZS1K4l6S5a0vPgImQ; acctype=mini; appid=wx1c36464bbea2507a; ieg_ams_session_token=26addbf5b9e946c7f5c7ddd258253a6659b9617d5f23933b979e4303c2da9756ea89; ieg_ams_token=7b9114300b79b9f89871547831663f9a; ieg_ams_token_time=1739532320',
+            'openid=oA2F77QwCpTZS1K4l6S5a0vPgImQ; acctype=mini; appid=wx1c36464bbea2507a; ieg_ams_session_token=77a38bf5ebbb17c2a7908ea30211060c08824750743aac1acdfd0d24dea08d60ea89; ieg_ams_token=d8d0624e491fd80ece2150ad9c132901; ieg_ams_token_time=1739586070',
         },
       });
 
-      const res = response.data.jData.data.data;
+      const res = response.data?.jData?.data?.data;
 
       return res;
     } catch (error) {
