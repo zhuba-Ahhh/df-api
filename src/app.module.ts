@@ -10,9 +10,14 @@ import { PropsModule } from './props/props.module';
 import { ConfigModule } from './config/config.module';
 import { InfoModule } from './info/info.module';
 import { ScheduleModule } from '@nestjs/schedule';
+import { ConfigModule as NestConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    NestConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: '.env',
+    }),
     ScheduleModule.forRoot(),
     AgentModule,
     ArmsModule,

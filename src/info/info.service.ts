@@ -35,6 +35,11 @@ export class InfoService {
     }
   }
 
+  constructor() {
+    // 立即执行一次数据更新
+    this.updateAssetsData();
+  }
+
   async getInfo(page: string, ck?: string) {
     const data = new URLSearchParams();
     data.append('iChartId', '319386');
@@ -112,10 +117,12 @@ export class InfoService {
     }
   }
 
-  @Cron('0 * * * * *')
+  @Cron('0 */30 * * * *')
   async updateAssetsData() {
     try {
-      const timestamp = new Date().toISOString();
+      const timestamp = new Date().toLocaleString('zh-CN', {
+        timeZone: 'Asia/Shanghai',
+      });
 
       // 读取固定文件的数据
       let existingData: AssetData[] = [];
@@ -159,6 +166,7 @@ export class InfoService {
 
         const { url } = await put(this.ASSETS_FILENAME, blob, {
           access: 'public',
+          addRandomSuffix: false, // 禁止添加随机后缀
         });
 
         console.log('数据更新成功，访问地址:', url);
@@ -170,7 +178,6 @@ export class InfoService {
     }
   }
 
-  // 修改获取数据的方法
   async getLocalAssets() {
     try {
       const { blobs } = await list({ prefix: this.ASSETS_FILENAME });
@@ -178,10 +185,10 @@ export class InfoService {
         const response = await fetch(blobs[0].url);
         return await response.json();
       }
-      return null;
+      return [];
     } catch (error) {
       console.error('Error reading from blob:', error);
-      return null;
+      return [];
     }
   }
 }
