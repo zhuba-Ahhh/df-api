@@ -9,9 +9,11 @@ import { ProtectModule } from './protect/protect.module';
 import { PropsModule } from './props/props.module';
 import { ConfigModule } from './config/config.module';
 import { InfoModule } from './info/info.module';
+import { ScheduleModule } from '@nestjs/schedule';
 
 @Module({
   imports: [
+    ScheduleModule.forRoot(),
     AgentModule,
     ArmsModule,
     AccessoriesModule,
