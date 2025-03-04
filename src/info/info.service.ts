@@ -117,7 +117,7 @@ export class InfoService {
     }
   }
 
-  @Cron('0 */30 * * * *')
+  @Cron('0 0 */12 * * *')
   async updateAssetsData() {
     try {
       const timestamp = new Date().toLocaleString('zh-CN', {
