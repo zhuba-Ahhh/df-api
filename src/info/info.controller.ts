@@ -30,4 +30,9 @@ export class InfoController {
     );
     return { code: 1, data };
   }
+  @Get('getLocalAssets')
+  async getLocalAssets() {
+    const data = await this.infoService.getLocalAssets();
+    return { code: 1, data };
+  }
 }

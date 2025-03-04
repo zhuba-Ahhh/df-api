@@ -6,6 +6,7 @@ import { ckOptions, AssetData } from '../common/const';
 
 import axios from 'axios';
 import { Datum, JData } from './types';
+import { put, list } from '@vercel/blob';
 
 @Injectable()
 export class InfoService {
@@ -121,15 +122,22 @@ export class InfoService {
     }
   }
 
-  @Cron('0 */30 * * * *')
+  @Cron('0 * * * * *')
   async updateAssetsData() {
     try {
       const timestamp = new Date().toISOString();
 
       // 读取现有数据
       let existingData: AssetData[] = [];
-      if (await fs.pathExists(this.dataFilePath)) {
-        existingData = await fs.readJson(this.dataFilePath);
+      try {
+        const { blobs } = await list();
+        if (blobs.length > 0) {
+          const latestBlob = blobs[blobs.length - 1];
+          const response = await fetch(latestBlob.url);
+          existingData = await response.json();
+        }
+      } catch (error) {
+        console.error('Error reading from blob:', error);
       }
 
       // 获取所有账号的数据
@@ -141,13 +149,11 @@ export class InfoService {
           );
 
           if (existingAccount) {
-            // 如果账号已存在，添加新记录
             return {
               ...existingAccount,
               records: [...existingAccount.records, { timestamp, data }],
             };
           } else {
-            // 如果是新账号，创建新记录
             return {
               label: option.label,
               records: [{ timestamp, data }],
@@ -156,41 +162,38 @@ export class InfoService {
         }),
       );
 
-      // 更新文件
+      // 上传到 Vercel Blob
       try {
-        // 确保目录存在
-        await fs.ensureDir(path.dirname(this.dataFilePath));
-        // 写入文件
-        await fs.writeJson(this.dataFilePath, newData, {
-          spaces: 2,
-          encoding: 'utf8',
-          mode: 0o666,
+        const filename = `assets-${timestamp}.json`;
+        const blob = new Blob([JSON.stringify(newData, null, 2)], {
+          type: 'application/json',
         });
-        console.log('数据写入成功');
-      } catch (writeError) {
-        console.error('写入文件失败:', writeError);
-        // 尝试使用同步方法
-        fs.writeJsonSync(this.dataFilePath, newData, {
-          spaces: 2,
-          encoding: 'utf8',
-          mode: 0o666,
+
+        const { url } = await put(filename, blob, {
+          access: 'public',
         });
-        console.log('使用同步方法写入成功');
+
+        console.log('数据上传成功，访问地址:', url);
+      } catch (uploadError) {
+        console.error('上传到 Vercel Blob 失败:', uploadError);
       }
     } catch (error) {
       console.error('Error updating assets data:', error);
     }
   }
 
-  // 新增获取本地数据的方法
+  // 获取本地数据的方法
   async getLocalAssets() {
     try {
-      if (await fs.pathExists(this.dataFilePath)) {
-        return await fs.readJson(this.dataFilePath);
+      const { blobs } = await list();
+      if (blobs.length > 0) {
+        const latestBlob = blobs[blobs.length - 1];
+        const response = await fetch(latestBlob.url);
+        return await response.json();
       }
       return null;
     } catch (error) {
-      console.error('Error reading assets data:', error);
+      console.error('Error reading from blob:', error);
       return null;
     }
   }
