@@ -26,5 +26,4 @@ export const ckOptions: CookieOption[] = [
     value:
       'pgv_pvid=4895559500; eas_sid=81i7L3v9k1T8O7K3Q4y8F213u6; pgv_info=ssid=s3810672168; dfqqcomrouteLine=record202410ver_record202410ver_record202410ver; RK=tSUQeBPr2E; ptcz=56761e84298743277c44fdc9ce6e1aaf01d848ddfba89205e806370b9d360f1e; iegams_milo_proxylogin_qc=101491592_%24%24_26440B7F3D3C0BA472803E8CC9CCF2AA_%24%24_21F4AD729C637E974124A70DFFEF70EB; acctype=qc; openid=26440B7F3D3C0BA472803E8CC9CCF2AA; access_token=21F4AD729C637E974124A70DFFEF70EB; appid=101491592; refresh_token=; ieg_ams_token=; ieg_ams_session_token=; ieg_ams_token_time=; ieg_ams_sign=; expires_time=',
   },
-  { label: '自定义', value: 'custom' },
 ];

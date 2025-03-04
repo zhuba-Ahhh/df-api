@@ -17,6 +17,10 @@ export class InfoService {
   constructor() {
     // 确保数据目录存在
     fs.ensureDirSync(path.dirname(this.dataFilePath));
+    // 如果文件不存在，创建一个空的 JSON 文件
+    if (!fs.pathExistsSync(this.dataFilePath)) {
+      fs.writeJsonSync(this.dataFilePath, [], { spaces: 2 });
+    }
   }
 
   private getHeaders(ck?: string) {
