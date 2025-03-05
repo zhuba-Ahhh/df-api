@@ -11,6 +11,7 @@ import { ConfigModule } from './config/config.module';
 import { InfoModule } from './info/info.module';
 import { ScheduleModule } from '@nestjs/schedule';
 import { ConfigModule as NestConfigModule } from '@nestjs/config';
+import { CronModule } from './cron/cron.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { ConfigModule as NestConfigModule } from '@nestjs/config';
     ProtectModule,
     PropsModule,
     InfoModule,
+    CronModule,
   ],
   controllers: [AppController],
   providers: [AppService],

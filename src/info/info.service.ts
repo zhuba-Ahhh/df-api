@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { Cron } from '@nestjs/schedule';
 import { ckOptions, AssetData } from '../common/const';
 
 import axios from 'axios';
@@ -117,7 +116,6 @@ export class InfoService {
     }
   }
 
-  @Cron('0 0 */12 * * *')
   async updateAssetsData() {
     try {
       const timestamp = new Date().toLocaleString('zh-CN', {
