@@ -10,7 +10,7 @@ export class CronService {
 
   constructor(private readonly infoService: InfoService) {
     // 立即执行一次数据更新
-    this.updateAssetsData();
+    // this.updateAssetsData();
   }
 
   async updateAssetsData() {
