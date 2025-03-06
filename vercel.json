@@ -18,9 +18,5 @@
         "PATCH"
       ]
     }
-  ],
-  "crons": [{
-    "path": "/api/cron/update-assets",
-    "schedule": "0 0 * * * *"
-  }]
+  ]
 }
