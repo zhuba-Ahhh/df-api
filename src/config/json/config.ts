@@ -1,3 +1,5 @@
+import { collectMap, collects } from './collect';
+
 const configData = {
   mapList: {
     gun: [
@@ -864,6 +866,8 @@ const configData = {
     5999: '黑鹰Ⅰ',
     6e3: '三角洲巅峰',
   },
+  collects,
+  collectMap,
 };
 
 export { configData };

@@ -189,4 +189,24 @@ export class InfoService {
       return [];
     }
   }
+
+  async getCollects() {
+    const data = new URLSearchParams();
+    data.append('iChartId', '357900');
+    data.append('sIdeToken', 'KL0LRc');
+    try {
+      const response = await axios.post(this.targetUrl, data.toString(), {
+        headers: {
+          Cookie:
+            'pgv_info=ssid=s4941677952; pgv_pvid=7196508015; eas_sid=a1a7z4h1Y1f811N6p1A3f1L3a6; RK=dx8FlIIP2G; ptcz=4b9ca7039af3daf154a8b6dfe75fd14b64ecf211c2f6b83ab3da30272990ecb7; dfqqcomrouteLine=record202410ver_record202410ver_record202410ver_record202410ver_record202410ver_record202410ver_record202410ver; qqmusic_uin=; qqmusic_key=; qqmusic_fromtag=; pac_uid=0_G4Sa8d6fMt5Rw; suid=user_0_81EGChn5ewS43; current-city-name=bj; _qimei_h38=d896cc47e3016aa60553f56403000006719202; _qimei_q36=; rv2=80FFAFDA6F00609DDD1AF487315EA9DBCACCBE48934F5116B5; property20=49E42A13F7EB5629F7022532031048438E3569D957F2344A3089F4BAAF8008C337FE62DF1699B56F; livelink_pvid=4954941440; livelink_channel_code=l_live; refresh_token=; expires_time=; iegams_milo_proxylogin_qc=101491592_%24%24_6299DAAC80EA915F34FDA0BE5A6B2635_%24%24_E0AD0A8D5AA2764360A0D32AC744E14E; acctype=qc; openid=6299DAAC80EA915F34FDA0BE5A6B2635; access_token=E0AD0A8D5AA2764360A0D32AC744E14E; appid=101491592; ieg_ams_token=; ieg_ams_session_token=; ieg_ams_token_time=; ieg_ams_sign=',
+        },
+      });
+
+      const res = response?.data?.jData;
+      return res;
+    } catch (error) {
+      console.error('Error reading from blob:', error);
+      return {};
+    }
+  }
 }
