@@ -36,7 +36,7 @@ export class InfoService {
 
   constructor() {
     // 立即执行一次数据更新
-    this.updateAssetsData();
+    // this.updateAssetsData();
   }
 
   async getInfo(page: string, ck?: string) {
@@ -103,7 +103,7 @@ export class InfoService {
         headers: {
           xweb_xhr: '1',
           Cookie:
-            'openid=oA2F77QwCpTZS1K4l6S5a0vPgImQ; acctype=mini; appid=wx1c36464bbea2507a; ieg_ams_session_token=77a38bf5ebbb17c2a7908ea30211060c08824750743aac1acdfd0d24dea08d60ea89; ieg_ams_token=d8d0624e491fd80ece2150ad9c132901; ieg_ams_token_time=1739586070',
+            'openid=oA2F77QwCpTZS1K4l6S5a0vPgImQ; acctype=mini; appid=wx1c36464bbea2507a; ieg_ams_session_token=72a3dba5baeb4890a09ab4d958391e1325807c554821d332e9bb1a27a1c98b70ea89; ieg_ams_token=4d861bc770075bd7b931b82ab2571a3c; ieg_ams_token_time=1744882375',
         },
       });
 
