@@ -29,10 +29,8 @@ export class InfoController {
   }
 
   @Get('getThreadDetail')
-  async getThreadDetail(@Query('threadID') threadID: string) {
-    const data = await this.infoService.getThreadDetail(
-      Number(threadID || 18226),
-    );
+  async getThreadDetail(@Query('ck') ck: string) {
+    const data = await this.infoService.getThreadDetail(ck);
     return { code: 1, data };
   }
   @Get('getLocalAssets')

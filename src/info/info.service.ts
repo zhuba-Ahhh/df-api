@@ -91,19 +91,18 @@ export class InfoService {
     }
   }
 
-  async getThreadDetail(threadID: number) {
+  async getThreadDetail(ck: string) {
     const data = new URLSearchParams();
     data.append('iChartId', '316968');
     data.append('sIdeToken', 'KfXJwH');
     data.append('method', 'thread.detail');
-    data.append('param', JSON.stringify({ threadID }));
+    data.append('param', JSON.stringify({ threadID: 18226 }));
 
     try {
       const response = await axios.post(this.targetUrl, data.toString(), {
         headers: {
           xweb_xhr: '1',
-          Cookie:
-            'openid=oA2F77QwCpTZS1K4l6S5a0vPgImQ; acctype=mini; appid=wx1c36464bbea2507a; ieg_ams_session_token=72a3dba5baeb4890a09ab4d958391e1325807c554821d332e9bb1a27a1c98b70ea89; ieg_ams_token=4d861bc770075bd7b931b82ab2571a3c; ieg_ams_token_time=1744882375',
+          Cookie: ck,
         },
       });
 
