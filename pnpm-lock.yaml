@@ -28,6 +28,7 @@ specifiers:
   eslint-plugin-prettier: ^5.0.0
   jest: ^29.5.0
   prettier: ^3.0.0
+  redis: ^5.1.1
   reflect-metadata: ^0.2.0
   rxjs: ^7.8.1
   source-map-support: ^0.5.21
@@ -52,6 +53,7 @@ dependencies:
   cheerio: 1.0.0
   class-transformer: 0.5.1
   class-validator: 0.14.2
+  redis: 5.1.1
   reflect-metadata: 0.2.2
   rxjs: 7.8.2
 
@@ -1162,6 +1164,49 @@ packages:
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     dev: true
 
+  /@redis/bloom/5.1.1_@redis+client@5.1.1:
+    resolution: {integrity: sha512-PnMcvpL7O2DHtnSL5JtyNmraNrdHuJXi3u2isGTUuPgkbAuWQKfZdknq471ySILL+qKtLfVJqzgDFMjYmZzK6Q==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      '@redis/client': ^5.1.1
+    dependencies:
+      '@redis/client': 5.1.1
+    dev: false
+
+  /@redis/client/5.1.1:
+    resolution: {integrity: sha512-vojbBqUdbkD+ylCy3+ZDXLzSmgiYH9pLrv87kF+nDgsRaHKrVVxPV9B4u6EfWRx7XGvQGZqsXVkKFhsEOsG3LA==}
+    engines: {node: '>= 18'}
+    dependencies:
+      cluster-key-slot: 1.1.2
+    dev: false
+
+  /@redis/json/5.1.1_@redis+client@5.1.1:
+    resolution: {integrity: sha512-A5M0dcgxGKq+oE6spIPBcGLDBiwoSPTs2wesVb4x30rXfG6rPtqt1Z7fCMtvTL2kHUNRKgZ78zhD+0+MENZt7g==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      '@redis/client': ^5.1.1
+    dependencies:
+      '@redis/client': 5.1.1
+    dev: false
+
+  /@redis/search/5.1.1_@redis+client@5.1.1:
+    resolution: {integrity: sha512-bChudQmcqfYUxEGMeXMkljXtwse4hzqcqRwbZDwRyYe+EEeW/lXVl3w/mS2tHnAb2yqGnfDghid8iHEtVNqjww==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      '@redis/client': ^5.1.1
+    dependencies:
+      '@redis/client': 5.1.1
+    dev: false
+
+  /@redis/time-series/5.1.1_@redis+client@5.1.1:
+    resolution: {integrity: sha512-HPjZLfcZxh5mBLqRgx7KCZG6JXxGnb7yJqo9qZ/KMTWK/k3SWyH47DHJbYbRNzKOEkbK/l/5kikDTm79uJuCbg==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      '@redis/client': ^5.1.1
+    dependencies:
+      '@redis/client': 5.1.1
+    dev: false
+
   /@scarf/scarf/1.4.0:
     resolution: {integrity: sha512-xxeapPiUXdZAE3che6f3xogoJPeZgig6omHEy1rIY5WVsB3H2BHNnZH+gHG6x91SCWyQCzWGsuL2Hh3ClO5/qQ==}
     requiresBuild: true
@@ -2226,6 +2271,11 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
     dev: true
+
+  /cluster-key-slot/1.1.2:
+    resolution: {integrity: sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA==}
+    engines: {node: '>=0.10.0'}
+    dev: false
 
   /co/4.6.0:
     resolution: {integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==}
@@ -4682,6 +4732,17 @@ packages:
     dependencies:
       picomatch: 2.3.1
     dev: true
+
+  /redis/5.1.1:
+    resolution: {integrity: sha512-4t6n2Q9aFqpQnqBR/g84zsXW+U0hdSzYymqoGGZk44p+kuzzHbgukjOAca+PlQ563TbXcgv1njerllYWjAWw4g==}
+    engines: {node: '>= 18'}
+    dependencies:
+      '@redis/bloom': 5.1.1_@redis+client@5.1.1
+      '@redis/client': 5.1.1
+      '@redis/json': 5.1.1_@redis+client@5.1.1
+      '@redis/search': 5.1.1_@redis+client@5.1.1
+      '@redis/time-series': 5.1.1_@redis+client@5.1.1
+    dev: false
 
   /reflect-metadata/0.2.2:
     resolution: {integrity: sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q==}
