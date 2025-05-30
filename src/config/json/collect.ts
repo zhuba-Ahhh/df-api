@@ -8,6 +8,7 @@ const dzcp_info = [
     class: 'dj_size_6',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15030050007',
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ const dzcp_info = [
     class: 'dj_size_6',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15030050014',
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ const dzcp_info = [
     class: 'dj_size_4',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15030050004',
   },
   {
     id: 4,
@@ -35,6 +38,7 @@ const dzcp_info = [
     class: 'dj_size_12',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15030050012',
   },
   {
     id: 5,
@@ -44,6 +48,7 @@ const dzcp_info = [
     class: 'dj_size_9',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15080050031',
   },
   {
     id: 6,
@@ -53,6 +58,7 @@ const dzcp_info = [
     class: 'dj_size_9',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15080050030',
   },
   {
     id: 7,
@@ -62,6 +68,7 @@ const dzcp_info = [
     class: 'dj_size_12',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15030050008',
   },
   {
     id: 8,
@@ -71,6 +78,7 @@ const dzcp_info = [
     class: 'dj_size_6',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['兑换扩容箱'],
+    pid: '15080050032',
   },
   {
     id: 9,
@@ -80,6 +88,7 @@ const dzcp_info = [
     class: 'dj_size_4',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['兑换扩容箱'],
+    pid: '15030010012',
   },
   {
     id: 10,
@@ -89,6 +98,7 @@ const dzcp_info = [
     class: 'dj_size_4',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['兑换扩容箱'],
+    pid: '15030050002',
   },
   {
     id: 11,
@@ -98,6 +108,7 @@ const dzcp_info = [
     class: 'dj_size_4',
     source: ['航天基地'],
     purpose: ['升级特勤处'],
+    pid: '15030050013',
   },
   {
     id: 12,
@@ -107,6 +118,7 @@ const dzcp_info = [
     class: 'dj_size_2',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['兑换扩容箱'],
+    pid: '15030050018',
   },
   {
     id: 13,
@@ -116,6 +128,7 @@ const dzcp_info = [
     class: 'dj_size_2',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15030050001',
   },
 ];
 
@@ -129,6 +142,7 @@ const gycl_info = [
     class: 'dj_size_3_4',
     source: ['航天基地'],
     purpose: ['升级特勤处'],
+    pid: '15020010033',
   },
   {
     id: 2,
@@ -138,6 +152,7 @@ const gycl_info = [
     class: 'dj_size_9',
     source: ['航天基地', '交易行', '零号大坝'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15020010031',
   },
   {
     id: 3,
@@ -147,6 +162,7 @@ const gycl_info = [
     class: 'dj_size_6',
     source: ['航天基地', '交易行', '零号大坝'],
     purpose: ['兑换扩容箱'],
+    pid: '15030050017',
   },
 ];
 // 工艺藏品
@@ -159,6 +175,7 @@ const gycp_info = [
     class: 'dj_size_1',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处'],
+    pid: '15080050006',
   },
   {
     id: 2,
@@ -168,6 +185,7 @@ const gycp_info = [
     class: 'dj_size_9',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['兑换扩容箱'],
+    pid: '15080050040',
   },
   {
     id: 3,
@@ -177,6 +195,7 @@ const gycp_info = [
     class: 'dj_size_6',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['兑换扩容箱'],
+    pid: '15080050041',
   },
   {
     id: 4,
@@ -186,6 +205,7 @@ const gycp_info = [
     class: 'dj_size_6',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['兑换扩容箱'],
+    pid: '15040050002',
   },
   {
     id: 5,
@@ -195,6 +215,7 @@ const gycp_info = [
     class: 'dj_size_4_l',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15080050003',
   },
   {
     id: 6,
@@ -204,6 +225,7 @@ const gycp_info = [
     class: 'dj_size_4',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15010050001',
   },
   {
     id: 7,
@@ -213,6 +235,7 @@ const gycp_info = [
     class: 'dj_size_2',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['兑换扩容箱'],
+    pid: '15080040001',
   },
   {
     id: 8,
@@ -222,6 +245,7 @@ const gycp_info = [
     class: 'dj_size_2',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15080050010',
   },
   {
     id: 9,
@@ -231,6 +255,7 @@ const gycp_info = [
     class: 'dj_size_1',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['兑换扩容箱'],
+    pid: '15080050014',
   },
   {
     id: 10,
@@ -240,6 +265,7 @@ const gycp_info = [
     class: 'dj_size_1',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['兑换扩容箱'],
+    pid: '15080050042',
   },
   {
     id: 11,
@@ -249,6 +275,7 @@ const gycp_info = [
     class: 'dj_size_9',
     source: ['巴克什', '交易行'],
     purpose: [],
+    pid: '15080050123',
   },
   {
     id: 12,
@@ -258,6 +285,7 @@ const gycp_info = [
     class: 'dj_size_9',
     source: ['巴克什', '交易行'],
     purpose: [],
+    pid: '15080050121',
   },
   {
     id: 13,
@@ -267,6 +295,7 @@ const gycp_info = [
     class: 'dj_size_6_h',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: [],
+    pid: '15080050120',
   },
   {
     id: 14,
@@ -276,8 +305,10 @@ const gycp_info = [
     class: 'dj_size_4',
     source: ['巴克什', '交易行'],
     purpose: [],
+    pid: '15080050122',
   },
 ];
+// 医疗道具
 // 医疗道具
 const ylcp_info = [
   {
@@ -288,6 +319,7 @@ const ylcp_info = [
     class: 'dj_size_9',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15080050097',
   },
   {
     id: 2,
@@ -297,6 +329,7 @@ const ylcp_info = [
     class: 'dj_size_6_h',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['兑换扩容箱'],
+    pid: '15080050058',
   },
   {
     id: 3,
@@ -306,6 +339,7 @@ const ylcp_info = [
     class: 'dj_size_4',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15060040004',
   },
   {
     id: 4,
@@ -315,6 +349,7 @@ const ylcp_info = [
     class: 'dj_size_6_h',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: [],
+    pid: '15080050113',
   },
 ];
 // 能源材料
@@ -327,6 +362,7 @@ const nycl_info = [
     class: 'dj_size_9',
     source: ['航天基地', '交易行', '零号大坝'],
     purpose: [],
+    pid: '15080050098',
   },
   {
     id: 2,
@@ -336,6 +372,7 @@ const nycl_info = [
     class: 'dj_size_12',
     source: ['航天基地', '交易行', '零号大坝'],
     purpose: [],
+    pid: '15080050100',
   },
   {
     id: 3,
@@ -345,8 +382,10 @@ const nycl_info = [
     class: 'dj_size_6',
     source: ['航天基地', '交易行', '零号大坝'],
     purpose: [],
+    pid: '15080050099',
   },
 ];
+
 // 资料情报
 const zlqb_info = [
   {
@@ -357,6 +396,7 @@ const zlqb_info = [
     class: 'dj_size_9',
     source: ['航天基地', '交易行', '零号大坝'],
     purpose: ['兑换扩容箱'],
+    pid: '15080050044',
   },
   {
     id: 2,
@@ -366,6 +406,7 @@ const zlqb_info = [
     class: 'dj_size_6',
     source: ['航天基地', '交易行', '零号大坝'],
     purpose: ['兑换扩容箱'],
+    pid: '15080050061',
   },
   {
     id: 3,
@@ -375,6 +416,7 @@ const zlqb_info = [
     class: 'dj_size_12',
     source: ['航天基地', '交易行', '零号大坝'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15080050062',
   },
   {
     id: 4,
@@ -384,6 +426,7 @@ const zlqb_info = [
     class: 'dj_size_1',
     source: ['航天基地', '交易行', '零号大坝'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15070050001',
   },
   {
     id: 5,
@@ -393,8 +436,10 @@ const zlqb_info = [
     class: 'dj_size_1',
     source: ['航天基地', '交易行', '零号大坝'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15070040003',
   },
 ];
+
 // 家居物品
 const jjwp_info = [
   {
@@ -405,6 +450,7 @@ const jjwp_info = [
     class: 'dj_size_9',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['兑换扩容箱'],
+    pid: '15080050066',
   },
   {
     id: 2,
@@ -414,6 +460,7 @@ const jjwp_info = [
     class: 'dj_size_6_h',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15080050067',
   },
   {
     id: 3,
@@ -423,6 +470,7 @@ const jjwp_info = [
     class: 'dj_size_2',
     source: ['航天基地', '交易行', '长弓溪谷'],
     purpose: ['升级特勤处', '兑换扩容箱'],
+    pid: '15060080015',
   },
   {
     id: 4,
@@ -432,6 +480,7 @@ const jjwp_info = [
     class: 'dj_size_2',
     source: ['航天基地', '长弓溪谷'],
     purpose: ['兑换生产材料'],
+    pid: '15080050069',
   },
 ];
 
@@ -443,7 +492,7 @@ const collects = [
   { title: '能源材料', info: nycl_info, get_num: 0, sum: 3 },
   { title: '资料情报', info: zlqb_info, get_num: 0, sum: 5 },
   { title: '家居物品', info: jjwp_info, get_num: 0, sum: 4 },
-  { title: '限定大红', info: jjwp_info, get_num: 0, sum: 1 },
+  // { title: '限定大红', info: jjwp_info, get_num: 0, sum: 1 },
 ];
 
 const itemidArray = {
