@@ -39,8 +39,8 @@ export class InfoController {
     return { code: 1, data };
   }
   @Get('getCollects')
-  async getCollects() {
-    const data = await this.infoService.getCollects();
+  async getCollects(@Query('ck') ck: string) {
+    const data = await this.infoService.getCollects(ck);
     return { code: 1, data };
   }
 
