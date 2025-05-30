@@ -1,4 +1,4 @@
-import { collectMap, collects } from './collect';
+import { allCollectsMap, collectMap, collects } from './collect';
 
 const configData = {
   mapList: {
@@ -742,7 +742,7 @@ const configData = {
       'https://playerhub.df.qq.com/playerhub/60004/object/p_88000000036.png',
     30010:
       'https://playerhub.df.qq.com/playerhub/60004/object/p_88000000037.png',
-    10011:
+    10001:
       'https://playerhub.df.qq.com/playerhub/60004/object/p_88000000038.png',
   },
   agentName: {
@@ -755,7 +755,7 @@ const configData = {
     30009: '乌鲁鲁',
     20004: '蛊',
     30010: '深蓝',
-    10011: '无名',
+    10001: '无名',
   },
   mapName: {
     1901: '长弓溪谷-常规',
@@ -767,6 +767,7 @@ const configData = {
     2202: '零号大坝-机密',
     2211: '零号大坝-常规',
     2212: '零号大坝-机密',
+    2231: '零号大坝-前夜',
     2232: '零号大坝-长夜',
     2233: '零号大坝-终夜',
     3901: '航天基地-机密',
@@ -873,6 +874,7 @@ const configData = {
   },
   collects,
   collectMap,
+  allCollectsMap,
 };
 
 export { configData };
