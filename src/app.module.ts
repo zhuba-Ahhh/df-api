@@ -26,7 +26,7 @@ import * as path from 'path';
 import { LoggerService } from './config/logger.config';
 
 const logsDir = path.join(process.cwd(), 'logs');
-if (!fs.existsSync(logsDir)) {
+if (!fs.existsSync(logsDir) && process.env.NODE_ENV !== 'production') {
   fs.mkdirSync(logsDir);
 }
 
