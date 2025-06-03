@@ -216,7 +216,6 @@ export class InfoService {
     const data = new URLSearchParams();
     // 固定参数（根据用户提供的 curl 示例写死）
     data.append('iChartId', '316969');
-    data.append('iSubChartId', '316969');
     data.append('sIdeToken', 'NoOapI');
     data.append('method', 'dfm/center.recent.detail');
     data.append('source', '2');
@@ -231,4 +230,51 @@ export class InfoService {
       return {}; // 异常时返回空对象
     }
   }
+
+  /**
+   * 获取每日密码（根据用户提供的 curl 示例实现）
+   * @param ck 用户 cookie
+   */
+  async getDailySecret(ck?: string) {
+    const data = new URLSearchParams();
+    data.append('iChartId', '384918');
+    data.append('sIdeToken', 'mbq5GZ');
+    data.append('method', 'dist.contents');
+    data.append(
+      'param',
+      JSON.stringify({ distType: 'bannerManage', contentType: 'secretDay' }),
+    );
+
+    try {
+      // 复用统一请求方法
+      const response = await this.makeRequest<any>(data, ck);
+      return splitStringToObjectArray(
+        response?.jData?.data?.data?.content?.secretDay?.data?.[0]?.desc || '',
+      ); // 提取返回的核心数据
+    } catch (error) {
+      console.error('获取每日密码失败:', error);
+      return []; // 异常时返回空数组
+    }
+  }
 }
+
+const splitStringToObjectArray = (input: string) => {
+  // 按分号拆分字符串，去除空格
+  const pairs = input.split(';').map((pair) => pair.trim());
+
+  // 创建结果数组
+  const result: Array<{ mapName: string; key: number }> = [];
+
+  // 遍历每个键值对
+  pairs.forEach((pair) => {
+    if (pair) {
+      // 确保不是空字符串
+      // 按冒号拆分键和值
+      const [mapName, key] = pair.split(':').map((item) => item.trim());
+      // 将键值对转换为对象并添加到结果数组
+      result.push({ mapName, key: parseInt(key, 10) });
+    }
+  });
+
+  return result;
+};

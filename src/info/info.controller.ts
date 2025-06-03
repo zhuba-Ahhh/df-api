@@ -50,6 +50,14 @@ export class InfoController {
     const data = await this.infoService.getYesterdayProfit(ck);
     return { code: 1, data }; // 与现有接口统一返回格式
   }
+  // 新增：获取每日密码接口（POST 类型）
+  @Post('getDailySecret')
+  async getDailySecret(
+    @Body('ck') ck: string, // 从请求体中获取 cookie
+  ) {
+    const data = await this.infoService.getDailySecret(ck);
+    return { code: 1, data }; // 与现有接口统一返回格式
+  }
 
   @Get('getCookieList')
   async getRedisList() {

@@ -39,10 +39,8 @@ export class PropsService {
   async getObjectDetails(ck: string, objectIDs: string[]) {
     const data = new URLSearchParams();
     data.append('iChartId', '316969');
-    data.append('iSubChartId', '316969');
     data.append('sIdeToken', 'NoOapI');
     data.append('method', 'dfm/object.list');
-    data.append('source', '2');
     data.append('param', JSON.stringify({ objectID: objectIDs.join(',') }));
 
     try {
