@@ -144,6 +144,154 @@ const agents = [
     ],
   },
   {
+    id: 10020,
+    operatorID: 88000000038,
+    operator: '无名',
+    fullName: '埃利·德·孟贝尔',
+    armyType: '突击',
+    pic: 'https://playerhub.df.qq.com/playerhub/60004/object/88000000038.png',
+    sort: 0,
+    prePic:
+      'https://playerhub.df.qq.com/playerhub/60004/object/p_88000000038.png',
+    armyTypePic:
+      'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10028.png',
+    armyTypeDesc:
+      '突击兵有更强的战斗能力，在举镜瞄准状态下拥有更快的移动速度。',
+    abilitiesList: [
+      {
+        abilityType: 'gear',
+        abilityTypeCN: '战术装备',
+        position: 'silence',
+        positionCN: '静音',
+        abilityName: '静默潜袭',
+        abilityDesc:
+          '无名启动身上携带的各种干扰器，附近的敌人受到声波干扰的影响，无名的声音传播范围被大大缩小，提升无名机动性的同时，在此期间的敌方侦察道具只会检测到无名启动干扰器时的起始位置。战场模式中无名不会被侦察到',
+        abilityPic:
+          'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10047.png',
+        sort: 0,
+      },
+      {
+        abilityType: 'props',
+        abilityTypeCN: '战术道具',
+        position: 'harm',
+        positionCN: '伤害',
+        abilityName: '旋刃飞行器',
+        abilityDesc:
+          '旋刃飞行器会锁定前方的敌人，锁定后丢出即可自动追踪敌人并爆开，释放内部的刀片，伤害并减速敌人，同时附加流血状态。从背后锁定敌人时，能更快速的完成锁定。不锁定直接投掷时，会在接触到墙体的短时间后爆炸。',
+        abilityPic:
+          'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10048.png',
+        sort: 0,
+      },
+      {
+        abilityType: 'props',
+        abilityTypeCN: '战术道具',
+        position: 'flash',
+        positionCN: '闪光',
+        abilityName: '突破型闪光弹',
+        abilityDesc:
+          '向前投掷一颗闪光弹，闪光弹会在接触到墙体的短暂延迟后爆炸，对附近所有\n的敌人进行闪光震撼',
+        abilityPic:
+          'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10049.png',
+        sort: 0,
+      },
+      {
+        abilityType: 'forte',
+        abilityTypeCN: '干员特长',
+        position: 'passive',
+        positionCN: '被动',
+        abilityName: '重伤延滞',
+        abilityDesc:
+          '被无名伤害的敌人需要花更长时间使用药品，倒地的敌人也需要更久的时间才\n能扶起。战场模式中减缓呼吸回血时间',
+        abilityPic:
+          'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10050.png',
+        sort: 0,
+      },
+    ],
+    strategyList: [
+      {
+        tagID: '138207',
+        tagType: 'oneMinute',
+      },
+      {
+        tagID: '138208',
+        tagType: 'god',
+      },
+    ],
+  },
+  {
+    id: 10019,
+    operatorID: 88000000037,
+    operator: '深蓝',
+    fullName: '阿列克谢.彼得罗夫',
+    armyType: '工程',
+    pic: 'https://playerhub.df.qq.com/playerhub/60004/object/88000000037.png',
+    sort: 0,
+    prePic:
+      'https://playerhub.df.qq.com/playerhub/60004/object/p_88000000037.png',
+    armyTypePic:
+      'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10038.png',
+    armyTypeDesc: '工程兵是道具使用专家，可用喷枪进行切割和维修。',
+    abilitiesList: [
+      {
+        abilityType: 'gear',
+        abilityTypeCN: '战术装备',
+        position: 'protect',
+        positionCN: '防护',
+        abilityName: '防爆套装',
+        abilityDesc:
+          '装备重型防爆套装和全身盾，大幅降低受到的所有伤害。防爆盾的观察窗可被破坏。防爆盾攻击可以击倒敌人或击回投掷物。',
+        abilityPic:
+          'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10043.png',
+        sort: 0,
+      },
+      {
+        abilityType: 'props',
+        abilityTypeCN: '战术道具',
+        position: 'decelerate',
+        positionCN: '减速',
+        abilityName: '刀片刺网手雷',
+        abilityDesc:
+          '落地后生成刀片刺网，敌人在铁丝网内移动时，会减速，受到伤害并发出声音。可被爆炸和近战摧毁。',
+        abilityPic:
+          'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10044.png',
+        sort: 0,
+      },
+      {
+        abilityType: 'props',
+        abilityTypeCN: '战术道具',
+        position: 'control',
+        positionCN: '控制',
+        abilityName: '多功能钩爪枪',
+        abilityDesc:
+          '发射钩爪，命中后拉回敌人，倒地队友或装备箱。钩爪枪的绳索可被破坏。',
+        abilityPic:
+          'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10045.png',
+        sort: 0,
+      },
+      {
+        abilityType: 'forte',
+        abilityTypeCN: '干员特长',
+        position: 'passive',
+        positionCN: '被动',
+        abilityName: '后方防护',
+        abilityDesc: '防爆盾未使用时会挂在角色后部，抵挡从后方射来的子弹',
+        abilityPic:
+          'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10046.png',
+        sort: 0,
+      },
+    ],
+    strategyList: [
+      {
+        tagID: '136854',
+        tagType: 'oneMinute',
+      },
+      {
+        tagID: '136855',
+        tagType: 'god',
+      },
+    ],
+  },
+  {
     id: 10002,
     operatorID: 88000000029,
     operator: '牧羊人',
@@ -284,6 +432,79 @@ const agents = [
       },
       {
         tagID: '135670',
+        tagType: 'god',
+      },
+    ],
+  },
+  {
+    id: 10018,
+    operatorID: 88000000036,
+    operator: '蛊',
+    fullName: '佐娅·庞琴科娃',
+    armyType: '支援',
+    pic: 'https://playerhub.df.qq.com/playerhub/60004/object/88000000036.png',
+    sort: 0,
+    prePic:
+      'https://playerhub.df.qq.com/playerhub/60004/object/p_88000000036.png',
+    armyTypePic:
+      'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10023.png',
+    armyTypeDesc: '支援兵有多样化的辅助手段，能以更快的速度救起同阵营友军。',
+    abilitiesList: [
+      {
+        abilityType: 'gear',
+        abilityTypeCN: '战术装备',
+        position: 'smoke',
+        positionCN: '烟雾',
+        abilityName: '致盲毒雾',
+        abilityDesc: '投掷一枚“致盲瓦斯弹”，可使范围内的敌方致盲',
+        abilityPic:
+          'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10042.png',
+        sort: 0,
+      },
+      {
+        abilityType: 'props',
+        abilityTypeCN: '战术道具',
+        position: 'buff',
+        positionCN: '增益',
+        abilityName: '肾上腺素激活',
+        abilityDesc:
+          '释放无人机，为身边的友方进行增益，提高友方操控速度和降低受击上抬，友方在增益期间参与击杀或助攻将增强下一次增益的强度',
+        abilityPic:
+          'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10041.png',
+        sort: 0,
+      },
+      {
+        abilityType: 'props',
+        abilityTypeCN: '战术道具',
+        position: 'disturb',
+        positionCN: '干扰',
+        abilityName: '“流荧”集群系统',
+        abilityDesc:
+          '使用“流荧”集群装置，向前释放无人机群，短暂激活路线上友方的肾上腺素，并且干扰无人机路线上的敌方，使敌方获得短暂干扰效果，将持续干扰敌方听觉、视觉以及降低玩家血量上限。',
+        abilityPic:
+          'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10039.png',
+        sort: 0,
+      },
+      {
+        abilityType: 'forte',
+        abilityTypeCN: '干员特长',
+        position: 'passive',
+        positionCN: '被动',
+        abilityName: '高效治疗',
+        abilityDesc:
+          '烽火地带中缩短身边队友使用消耗品的时间，全面战场中缩短身边队友受伤后开始恢复的所需时间。',
+        abilityPic:
+          'https://playerhub.df.qq.com/playerhub/60004/operator/abilities/10040.png',
+        sort: 0,
+      },
+    ],
+    strategyList: [
+      {
+        tagID: '136295',
+        tagType: 'oneMinute',
+      },
+      {
+        tagID: '136296',
         tagType: 'god',
       },
     ],
