@@ -1,13 +1,13 @@
 import { Controller, Get, Post, Body, Query } from '@nestjs/common';
 import { InfoService } from './info.service';
-import { RedisService } from './redis.service'; // 新增：导入 Redis 服务
-import { ListItem } from './redis.service'; // 新增：导入类型
+import { RedisService } from './redis.service';
+import { ListItem } from './redis.service';
 
 @Controller('info')
 export class InfoController {
   constructor(
     private readonly infoService: InfoService,
-    private readonly redisService: RedisService, // 新增：注入 Redis 服务
+    private readonly redisService: RedisService,
   ) {}
   @Get('getInfo')
   async getInfo(@Query('page') page: string, @Query('ck') ck: string) {
@@ -42,6 +42,13 @@ export class InfoController {
   async getCollects(@Query('ck') ck: string) {
     const data = await this.infoService.getCollects(ck);
     return { code: 1, data };
+  }
+
+  // 新增：获取昨日收益接口
+  @Get('getYesterdayProfit')
+  async getYesterdayProfit(@Query('ck') ck: string) {
+    const data = await this.infoService.getYesterdayProfit(ck);
+    return { code: 1, data }; // 与现有接口统一返回格式
   }
 
   @Get('getCookieList')

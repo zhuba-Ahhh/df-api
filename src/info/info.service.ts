@@ -207,4 +207,28 @@ export class InfoService {
       return {};
     }
   }
+
+  /**
+   * 获取昨日收益（按用户要求：仅需传入 cookie，其他参数写死）
+   * @param ck 用户 cookie
+   */
+  async getYesterdayProfit(ck?: string) {
+    const data = new URLSearchParams();
+    // 固定参数（根据用户提供的 curl 示例写死）
+    data.append('iChartId', '316969');
+    data.append('iSubChartId', '316969');
+    data.append('sIdeToken', 'NoOapI');
+    data.append('method', 'dfm/center.recent.detail');
+    data.append('source', '2');
+    data.append('param', JSON.stringify({ resourceType: 'sol' }));
+
+    try {
+      // 使用现有 makeRequest 方法发送请求（复用统一请求逻辑）
+      const response = await this.makeRequest<any>(data, ck);
+      return response?.jData?.data?.data || {}; // 返回 jData 字段（与现有接口风格一致）
+    } catch (error) {
+      console.error('获取昨日收益失败:', error);
+      return {}; // 异常时返回空对象
+    }
+  }
 }
