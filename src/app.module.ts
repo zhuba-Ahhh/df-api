@@ -37,6 +37,9 @@ export class LoggingInterceptor implements NestInterceptor {
   constructor(private readonly logger: LoggerService) {}
 
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
+    if (process.env.NODE_ENV === 'production') {
+      return next.handle();
+    }
     const req = context.switchToHttp().getRequest();
     const now = Date.now();
 
