@@ -43,7 +43,6 @@ export class PropsService {
     data.append('method', 'dfm/object.list');
     data.append('param', JSON.stringify({ objectID }));
     data.append('source', '2');
-    console.log('[48;5;214m [ data ]-45-「undefined」 [0m', data);
 
     try {
       const response = await this.makeRequest<any>(data, ck);
