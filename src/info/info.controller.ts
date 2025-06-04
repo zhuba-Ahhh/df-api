@@ -44,6 +44,20 @@ export class InfoController {
     return { code: 1, data };
   }
 
+  @Get('getPersonResource')
+  async getPersonResource(
+    @Query('seasonid') seasonid: string,
+    @Query('ck') ck: string,
+    @Query('isAllSeason') isAllSeason: boolean = false,
+  ) {
+    const data = await this.infoService.getPersonResource(
+      seasonid,
+      ck,
+      isAllSeason,
+    );
+    return { code: 1, data };
+  }
+
   // 新增：获取昨日收益接口
   @Get('getYesterdayProfit')
   async getYesterdayProfit(@Query('ck') ck: string) {

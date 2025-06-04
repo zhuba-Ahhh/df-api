@@ -68,6 +68,29 @@ export class InfoService {
     }
   }
 
+  async getPersonResource(seasonid: string, ck: string, isAllSeason = false) {
+    const data = new URLSearchParams();
+    data.append('iChartId', '316969');
+    data.append('sIdeToken', 'NoOapI');
+    data.append('source', '2');
+    data.append('method', 'dfm/center.person.resource');
+    data.append(
+      'param',
+      JSON.stringify({
+        resourceType: 'sol',
+        seasonid: [Number(seasonid)],
+        isAllSeason: String(isAllSeason) === 'true',
+      }),
+    );
+
+    try {
+      const response = await this.makeRequest<any>(data, ck);
+      return (response?.jData?.data?.data?.solDetail || {}) as JData;
+    } catch {
+      return {};
+    }
+  }
+
   async getAssets(ck?: string) {
     const items = ['17888808888', '17888808889', '17020000010'];
 
