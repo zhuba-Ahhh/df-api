@@ -1,4 +1,4 @@
-import { Controller, Get, Query, Post, Body } from '@nestjs/common';
+import { Controller, Get, Query } from '@nestjs/common';
 import { PropsService } from './props.service';
 
 @Controller('props')
@@ -16,10 +16,10 @@ export class PropsController {
   }
 
   // 新增：获取物品详情的 POST 接口
-  @Post('getObjectDetails')
+  @Get('getObjectDetails')
   async getObjectDetails(
-    @Body('ck') ck: string, // 从请求体中获取 cookie
-    @Body('objectIDs') objectIDs: string[], // 从请求体中获取物品 ID 数组
+    @Query('ck') ck: string, // 从请求体中获取 cookie
+    @Query('objectIDs') objectIDs: string, // 从请求体中获取物品 ID 数组
   ) {
     const data = await this.propsService.getObjectDetails(ck, objectIDs);
     return { code: 1, data }; // 与现有接口统一返回格式

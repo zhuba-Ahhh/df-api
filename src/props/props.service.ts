@@ -36,19 +36,21 @@ export class PropsService {
   }
 
   // 新增：获取物品详情接口
-  async getObjectDetails(ck: string, objectIDs: string[]) {
+  async getObjectDetails(ck: string, objectID: string) {
     const data = new URLSearchParams();
     data.append('iChartId', '316969');
     data.append('sIdeToken', 'NoOapI');
     data.append('method', 'dfm/object.list');
-    data.append('param', JSON.stringify({ objectID: objectIDs.join(',') }));
+    data.append('param', JSON.stringify({ objectID }));
+    data.append('source', '2');
+    console.log('[48;5;214m [ data ]-45-「undefined」 [0m', data);
 
     try {
       const response = await this.makeRequest<any>(data, ck);
-      return response?.jData?.data || {}; // 根据实际响应结构调整
+      return response?.jData?.data?.data?.list || []; // 根据实际响应结构调整
     } catch (error) {
       console.error('获取物品详情失败:', error);
-      return {}; // 异常时返回空对象
+      return []; // 异常时返回空对象
     }
   }
 }
