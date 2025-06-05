@@ -98,4 +98,11 @@ export class InfoController {
     const data = await this.redisService.initList(initialData);
     return { code: 1, data };
   }
+
+  // 新增：获取个人制造详情接口
+  @Get('getManufacturingDetails')
+  async getManufacturingDetails(@Query('ck') ck: string) {
+    const data = await this.infoService.getManufacturingDetails(ck);
+    return { code: 1, data }; // 与现有接口统一返回格式
+  }
 }

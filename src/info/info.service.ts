@@ -279,6 +279,32 @@ export class InfoService {
       return []; // 异常时返回空数组
     }
   }
+
+  /**
+   * 获取个人制造详情
+   * @param ck 用户 cookie
+   */
+  async getManufacturingDetails(ck?: string) {
+    const data = new URLSearchParams();
+    data.append('iChartId', '365589');
+    data.append('sIdeToken', 'bQaMCQ');
+    data.append('source', '2');
+
+    try {
+      const response = await axios.post(this.targetUrl, data.toString(), {
+        headers: {
+          xweb_xhr: '1',
+          priority: 'u=1, i',
+          Cookie: ck || this.presetCookie,
+          'content-type': 'application/x-www-form-urlencoded',
+        },
+      });
+      return response.data?.jData?.data?.data || {};
+    } catch (error) {
+      console.error('获取个人制造详情失败:', error);
+      return {}; // 异常时返回空对象
+    }
+  }
 }
 
 const splitStringToObjectArray = (input: string) => {
