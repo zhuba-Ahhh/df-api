@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Query } from '@nestjs/common';
+import { Controller, Get, Query } from '@nestjs/common';
 import { InfoService } from './info.service';
 import { RedisService } from './redis.service';
 import { ListItem } from './redis.service';
@@ -79,22 +79,23 @@ export class InfoController {
     return { code: 1, data };
   }
 
-  @Post('addCookie')
-  async addRedisItem(@Body() item: Omit<ListItem, 'id'>) {
+  @Get('addCookie')
+  async addRedisItem(@Query() item: Omit<ListItem, 'id'>) {
     const data = await this.redisService.addItem(item);
     return { code: 1, data };
   }
 
-  @Post('editCookie')
+  @Get('editCookie')
   async updateRedisItem(
-    @Body('label') label: string,
-    @Body('value') value: string,
+    @Query('label') label: string,
+    @Query('value') value: string,
   ) {
     const data = await this.redisService.updateItem(label, value);
     return { code: 1, data: data || null };
   }
-  @Post('initCookieList')
-  async initRedisList(@Body() initialData: ListItem[]) {
+
+  @Get('initCookieList')
+  async initRedisList(@Query('initialData') initialData: ListItem[]) {
     const data = await this.redisService.initList(initialData);
     return { code: 1, data };
   }
