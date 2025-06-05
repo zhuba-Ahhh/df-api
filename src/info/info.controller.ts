@@ -94,6 +94,13 @@ export class InfoController {
     return { code: 1, data: data || null };
   }
 
+  // 新增：删除单个对象接口
+  @Get('deleteCookie')
+  async deleteRedisItem(@Query('label') label: string) {
+    const data = await this.redisService.deleteItem(label);
+    return { code: data ? 1 : 0, data: data || null };
+  }
+
   @Get('initCookieList')
   async initRedisList(@Query('initialData') initialData: ListItem[]) {
     const data = await this.redisService.initList(initialData);
