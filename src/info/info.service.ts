@@ -312,7 +312,7 @@ const splitStringToObjectArray = (input: string) => {
   const pairs = input.split(';').map((pair) => pair.trim());
 
   // 创建结果数组
-  const result: Array<{ mapName: string; key: number }> = [];
+  const result: Array<{ mapName: string; key: string }> = [];
 
   // 遍历每个键值对
   pairs.forEach((pair) => {
@@ -321,7 +321,7 @@ const splitStringToObjectArray = (input: string) => {
       // 按冒号拆分键和值
       const [mapName, key] = pair.split(':').map((item) => item.trim());
       // 将键值对转换为对象并添加到结果数组
-      result.push({ mapName, key: parseInt(key, 10) });
+      result.push({ mapName, key });
     }
   });
 
