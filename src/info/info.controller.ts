@@ -102,7 +102,7 @@ export class InfoController {
   }
 
   @Get('initCookieList')
-  async initRedisList(@Query('initialData') initialData: ListItem[]) {
+  async initRedisList(@Query('initialData') initialData: string) {
     const data = await this.redisService.initList(initialData);
     return { code: 1, data };
   }

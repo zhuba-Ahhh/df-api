@@ -32,19 +32,23 @@ export class RedisService implements OnModuleInit, OnModuleDestroy {
 
   /** 新增单个对象 */
   async addItem(item: Omit<ListItem, 'id'>): Promise<ListItem[]> {
-    const list = await this.getList();
-    const targetIndex = list.findIndex(
-      (existingItem) => existingItem.label === item.label,
-    );
+    if (item && item.label && item.value) {
+      const list = await this.getList();
+      const targetIndex = list.findIndex(
+        (existingItem) => existingItem.label === item.label,
+      );
 
-    if (targetIndex !== -1) {
-      // 如果存在相同 label 的项，调用 updateItem 方法更新
-      return this.updateItem(item.label, item.value);
+      if (targetIndex !== -1) {
+        // 如果存在相同 label 的项，调用 updateItem 方法更新
+        return this.updateItem(item.label, item.value);
+      }
+
+      const newList = [...list, item];
+      await this.client.set('cookieList', JSON.stringify(newList));
+      return newList;
     }
 
-    const newList = [...list, item];
-    await this.client.set('cookieList', JSON.stringify(newList));
-    return newList;
+    return [];
   }
 
   /** 修改单个对象（通过 label 匹配） */
@@ -64,9 +68,9 @@ export class RedisService implements OnModuleInit, OnModuleDestroy {
   }
 
   /** 初始化整个列表（覆盖现有数据） */
-  async initList(initialData: ListItem[]): Promise<ListItem[]> {
-    await this.client.set('cookieList', JSON.stringify(initialData));
-    return initialData;
+  async initList(initialData: string): Promise<ListItem[]> {
+    await this.client.set('cookieList', initialData);
+    return JSON.parse(initialData);
   }
 
   /** 删除单个对象（通过 label 匹配） */
